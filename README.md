@@ -1,40 +1,40 @@
-# Primer Proyecto TypeScript
+# Proyecto de Introducción a TypeScript
 
-Este es un proyecto básico de TypeScript que incluye varios ejemplos de código para ilustrar diferentes características y funcionalidades de TypeScript.
+Este repositorio contiene un proyecto introductorio de TypeScript que demuestra diversas funcionalidades y características clave del lenguaje mediante ejemplos prácticos.
 
-## Estructura del Proyecto
+## Organización del Proyecto
 
-El proyecto está organizado de la siguiente manera:
+La estructura del proyecto está dividida de la siguiente manera:
 
-- `index.html`: Archivo HTML principal que incluye todos los scripts JavaScript generados.
-- `scripts/ts/`: Carpeta que contiene los archivos TypeScript originales.
-- `scripts/js/`: Carpeta que contiene los archivos JavaScript generados a partir de los archivos TypeScript.
-- `tsconfig.json`: Archivo de configuración de TypeScript.
+- **`index.html`**: Página principal que referencia los scripts JavaScript generados.
+- **`scripts/ts/`**: Carpeta donde se encuentran los archivos TypeScript originales.
+- **`scripts/js/`**: Carpeta que almacena los archivos JavaScript generados tras la compilación.
+- **`tsconfig.json`**: Archivo con las configuraciones del compilador TypeScript.
 
-## Archivos TypeScript
+## Descripción de los Archivos TypeScript
 
-### `holaMundo.ts`
-Un simple archivo que imprime "Hola mundo" en la consola.
+### **`holaMundo.ts`**
+Un ejemplo sencillo que imprime "Hola mundo" en la consola.
 ```ts
 console.log("Hola mundo");
 ```
 
-### `futbol.ts`
-Un archivo que contiene una función para simular un juego de fútbol.
+### **`futbol.ts`**
+Define una función para simular un partido de fútbol.
 ```ts
-let interMiami: number = 11;
-let fcDallas: number = 11;
-let messi: number = 1;
-let juegaMessi: boolean = true;
+let interMiami = 11;
+let fcDallas = 11;
+let messi = 1;
+let juegaMessi = true;
 
-let palabras: string = 'Me emocioné al verlo a Messi';
+let palabras = 'Me emocioné al verlo a Messi';
 function jugar(equipo1: number, equipo2: number, juegaMessi: boolean) {/*...*/}
 
 jugar(interMiami, fcDallas, juegaMessi);
 ```
 
-### `disney.ts`
-Un archivo que muestra el uso de variables con diferentes tipos.
+### **`disney.ts`**
+Demuestra el uso de variables de tipo `any` para almacenar distintos tipos de datos.
 ```ts
 let disney: any;
 
@@ -48,8 +48,8 @@ disney = true;
 console.log(disney);
 ```
 
-### `arreglos.ts`
-Un archivo que muestra el uso de arreglos en TypeScript.
+### **`arreglos.ts`**
+Ejemplo práctico del manejo de arreglos en TypeScript.
 ```ts
 let arregloNumeros = [1, 2, 3, 4, 5];
 let arregloTexto = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
@@ -57,8 +57,8 @@ let arregloTexto = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
 arregloTexto[0].indexOf("uno");
 ```
 
-### `Sorteo.ts`
-Un archivo que define una clase genérica `Sorteo`.
+### **`Sorteo.ts`**
+Contiene una clase genérica `Sorteo` que simula el sorteo de tickets.
 ```ts
 class Sorteo<T> {/*...*/}
 let sorteo = new Sorteo<string>('Sergie Code');
@@ -66,18 +66,18 @@ sorteo.setTicket('S7');
 console.log(sorteo.sortear());
 ```
 
-### `Pelicula.ts`
-Un archivo que define una clase `Pelicula`.
+### **`Pelicula.ts`**
+Implementa una clase `Pelicula` para gestionar información sobre películas y proyectarlas.
 ```ts
 class Pelicula {/*...*/}
 
-const Pelicula1 = new Pelicula("El Padrino", ["Marlon Brando", "Al Pacino"], ["James Caan", "Robert Duvall"]);
-Pelicula1.proyectarEnCine(); // Proyectando El Padrino
-console.log(Pelicula1);
+const pelicula1 = new Pelicula("El Padrino", ["Marlon Brando", "Al Pacino"], ["James Caan", "Robert Duvall"]);
+pelicula1.proyectarEnCine(); // Proyectando El Padrino
+console.log(pelicula1);
 ```
 
-### `typeP.ts`
-Un archivo que define un tipo `Programador`.
+### **`typeP.ts`**
+Declara un tipo personalizado `Programador` con propiedades específicas.
 ```ts
 type Programador = {
     nombre: string,
@@ -85,23 +85,23 @@ type Programador = {
     tomaMate: boolean,
 }
 
-let programador1 : Programador = {
+let programador1: Programador = {
     nombre: "Juan",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
-    tomaMate : true,
+    tomaMate: true,
 };
 ```
 
-### `interfaceP.ts`
-Un archivo que define una interfaz `ProgramadorInterface`.
+### **`interfaceP.ts`**
+Define una interfaz `ProgramadorInterface` para estandarizar las propiedades de un programador.
 ```ts
 interface ProgramadorInterface {/*...*/}
 let programadorFromInterface = {
     nombre: "Juan",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
-    tomaMate : true,
+    tomaMate: true,
     apellido: "Perez",
-    homero : "dou"
+    homero: "dou"
 };
 
 function enviarCurriculum(programador: ProgramadorInterface) {/*...*/}
@@ -109,22 +109,22 @@ function enviarCurriculum(programador: ProgramadorInterface) {/*...*/}
 enviarCurriculum(programadorFromInterface); // Este curriculum es de Juan
 ```
 
-## Configuración de TypeScript
+## Configuración del Proyecto
 
-El archivo `tsconfig.json` contiene la configuración del compilador TypeScript. Algunas configuraciones importantes incluyen:
-- `target`: Especifica la versión de JavaScript a la que se compilará el código TypeScript.
-- `module`: Especifica el sistema de módulos que se utilizará.
-- `outDir`: Especifica el directorio de salida para los archivos JavaScript generados.
+El archivo `tsconfig.json` contiene parámetros clave como:
+- **`target`**: Define la versión de JavaScript a la que se transpilará el código.
+- **`module`**: Especifica el sistema de módulos a usar.
+- **`outDir`**: Indica el directorio de salida para los archivos generados.
 
-## Cómo Ejecutar el Proyecto
+## Pasos para Ejecutar el Proyecto
 
-1. Clona el repositorio.
-2. Instala TypeScript si no lo tienes instalado:
+1. Clonar este repositorio en tu equipo.
+2. Instalar TypeScript si aún no está instalado:
     ```sh
     npm install -g typescript
     ```
-3. Compila los archivos TypeScript:
+3. Compilar los archivos TypeScript usando:
     ```sh
     tsc
     ```
-4. Abre `index.html` en tu navegador para ver los resultados.
+4. Abrir el archivo `index.html` en un navegador para visualizar los resultados. 
