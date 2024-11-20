@@ -6,7 +6,7 @@ type Programador = {
 
 
 let programador1 : Programador = {
-    nombre: "Luciano",
+    nombre: "Ignacio",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
     tomaMate : true,
 };
