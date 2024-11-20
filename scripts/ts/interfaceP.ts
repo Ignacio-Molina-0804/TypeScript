@@ -6,11 +6,10 @@ interface ProgramadorInterface {
 
 
 let programadorFromInterface = {
-    nombre: "Luciano",
+    nombre: "Ignacio",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
     tomaMate : true,
-    apellido: "Losada",
-    homero : "dou"
+    apellido: "Molina",
 };
 
 function enviarCurriculum(programador: ProgramadorInterface) {
