@@ -1,11 +1,11 @@
 let programador = {
-    nombre: "Juan",
+    nombre: "Ignacio",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
     tomaMate : true,
 };
 
 programador = {
-    nombre: "Luciano",
+    nombre: "Pepito",
     lenguajes: ["JavaScript", "TypeScript", "Python"],
     tomaMate : false,
 }
